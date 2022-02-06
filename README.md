@@ -186,6 +186,11 @@ meter values and battery voltage and percentage.
 Replace ``"electricity"`` in the `state_topic` with the name you configured your
 MQTT topic prefix to be.
 
+If necessary, replace `0.001` in the line containing
+`value_template: "{{ value | float * 0.001 }}"`
+based on how many impulses make a unit, as stated on the meter (e.g.
+`1 imp = 0.001kWh`).
+
 ```yaml
 sensor:
   - platform: mqtt
