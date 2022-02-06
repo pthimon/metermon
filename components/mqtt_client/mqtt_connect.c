@@ -87,7 +87,7 @@ void mqtt_publish(void on_mqtt_connect(esp_mqtt_client_handle_t))
     if (bits & CONNECTED_BIT) {
         on_mqtt_connect(mqtt_client);
         // hacky delay because doesn't reliably publish without it
-        vTaskDelay(pdMS_TO_TICKS(1));
+        vTaskDelay(pdMS_TO_TICKS(10));
         esp_mqtt_client_disconnect(mqtt_client);
     }
 }
