@@ -71,7 +71,7 @@ Cut the veroboard into a 3x3 square (11x11mm) with a sharp knife or old side cut
 Solder the 3 header pins, the resistor and either the photodiode or the reed
 switch to the board.
 
-The photodiode should have its flat edge against the middle 3.3V pin.
+The photodiode should have its flat edge against the 3.3V pin.
 
 Ensure the photodiode is on the opposite side of the board to the
 header pins so that it can be positioned flush against the LED on the meter, or

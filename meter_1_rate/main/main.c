@@ -69,7 +69,7 @@ void app_main(void) {
     if (RESET_NVS) {
         // recompile to reset the stored counter if necessary
         reset_nvs(CONFIG_RESET_NVS_VALUE);
-        printf("Reset NVS values to %d %d", CONFIG_RESET_NVS_VALUE);
+        printf("Reset NVS values to %d", CONFIG_RESET_NVS_VALUE);
     } else {
         pulse_count_main(init_ulp_program, on_wifi_connect);
     }
@@ -108,7 +108,7 @@ static void init_ulp_program(void) {
         ulp_edge_count_to_wake_up = 2;
     } else {
         // wake up after 10 pulses (e.g. 0.01 kWh or 0.01 m3)
-        ulp_edge_count_to_wake_up = 20;
+        ulp_edge_count_to_wake_up = CONFIG_PULSE_COUNT_BEFORE_WAKEUP * 2;
     }
 
     /* Set ULP wake up period to T = 20ms.

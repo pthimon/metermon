@@ -44,6 +44,10 @@ menu "Meter Configuration"
         string "Subnet netmask if using static IP"
         default "255.255.255.0"
 
+    config PULSE_COUNT_BEFORE_WAKEUP
+        int "Pulses to count before waking and sending to server"
+        default 10
+
     config RESET_NVS
         boolean "Reset the stored meter values"
         default false
@@ -55,7 +59,7 @@ menu "Meter Configuration"
     config RESET_NVS_VALUE_2
         int "Reset value for rate 2"
         default 0
-    
+
     config USE_BUTTON_DEBUG
         boolean "Use the onboard button to debug"
         default false

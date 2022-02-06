@@ -44,6 +44,10 @@ menu "Meter Configuration"
         string "Subnet netmask if using static IP"
         default "255.255.255.0"
 
+    config PULSE_COUNT_BEFORE_WAKEUP
+        int "Pulses to count before waking and sending to server"
+        default 10
+
     config RESET_NVS
         boolean "Reset the stored meter value"
         default true

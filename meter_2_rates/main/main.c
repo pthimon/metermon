@@ -134,7 +134,7 @@ static void init_ulp_program(void) {
         ulp_edge_count_to_wake_up = 2;
     } else {
         // wake up after 10 pulses (e.g. 0.01 kWh or 0.01 m3)
-        ulp_edge_count_to_wake_up = 20;
+        ulp_edge_count_to_wake_up = CONFIG_PULSE_COUNT_BEFORE_WAKEUP * 2;
     }
     ulp_io_changed = 0;
 
