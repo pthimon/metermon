@@ -54,14 +54,21 @@ making sure that the missing pins are furthest away from the USB port.
 The easiest way to solder is to use a breadboard to hold the pins in place
 while they are soldered.
 
-[IMAGE BREADBOARD]
-
 Cut the "Low power" trace with a sharp knife. After doing this I measured the
 deep sleep current to be about 14 uA.
 
 [IMAGE TRACE]
 
-Cut the veroboard into a 3x3 square with a sharp knife or old side cutters.
+## Sensors
+
+The photodiode or reed switch can be connected to pin A3 (for the first sensor)
+or pint A1 (if connecting a second sensor):
+
+![Circuit](images/circuit.png)
+
+![Pinout](images/firebeetle_pinout.png)
+
+Cut the veroboard into a 3x3 square (11x11mm) with a sharp knife or old side cutters.
 
 Solder the 3 header pins, the resistor and either the photodiode or the reed
 switch to the board.
