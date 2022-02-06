@@ -1,0 +1,2 @@
+
+float check_battery();

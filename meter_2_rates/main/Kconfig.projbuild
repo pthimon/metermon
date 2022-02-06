@@ -1,0 +1,63 @@
+menu "Meter Configuration"
+
+    config METER_NAME
+        string "Meter name"
+        default "meter"
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default "myssid"
+        help
+            SSID (network name) for the example to connect to.
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi Password"
+        default "mypassword"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+    config ESP_MAXIMUM_RETRY
+        int "Maximum retry"
+        default 5
+        help
+            Set the Maximum retry to avoid station reconnecting to the AP unlimited when the AP is really inexistent.
+
+    config BROKER_URL
+        string "Broker URL"
+        default "mqtt://mqtt.eclipseprojects.io"
+        help
+            URL of the broker to connect to
+
+    config USE_STATIC_IP
+        boolean "Use static IP address"
+        default true
+
+    config STATIC_IP
+        string "Static IP address"
+        default "192.168.0.100"
+
+    config GATEWAY
+        string "IP address of gateway if using static IP"
+        default "192.168.0.1"
+
+    config NETMASK
+        string "Subnet netmask if using static IP"
+        default "255.255.255.0"
+
+    config RESET_NVS
+        boolean "Reset the stored meter values"
+        default false
+
+    config RESET_NVS_VALUE
+        int "Reset value for rate 1"
+        default 0
+
+    config RESET_NVS_VALUE_2
+        int "Reset value for rate 2"
+        default 0
+    
+    config USE_BUTTON_DEBUG
+        boolean "Use the onboard button to debug"
+        default false
+
+endmenu
