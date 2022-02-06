@@ -66,8 +66,6 @@ or pint A1 (if connecting a second sensor):
 
 ![Circuit](images/circuit.png)
 
-![Pinout](images/firebeetle_pinout.png)
-
 Cut the veroboard into a 3x3 square (11x11mm) with a sharp knife or old side cutters.
 
 Solder the 3 header pins, the resistor and either the photodiode or the reed
@@ -239,7 +237,7 @@ or
 Connect the photodiode or reed switch board to the FireBeetle, matching pins
 3.3, GND and A3
 
-[IMAGE BOARD PINOUT]
+![Pinout](images/firebeetle_pinout.png)
 
 [IMAGE SENSOR PINOUT]
 
