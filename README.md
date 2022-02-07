@@ -117,6 +117,12 @@ idf.py monitor
 
 ## Set static IP
 
+Press the button marked with `27` (*not* the `RST` button) on the FireBeetle. The
+green LED will flash, and log entries will appear in the console. Find out the IP address
+assigned by looking for the log line starting `got ip:`, and configure your
+router so that the device is given a static IP address. This will save a lot of
+battery life by speeding up the WiFi connect process.
+
 `idf.py menuconfig`
 
 Select "Meter Configuration":
@@ -133,12 +139,6 @@ idf.py monitor
 ```
 
 ## Test
-
-Press the button marked with `27` (*not* the `RST` button) on the FireBeetle. The
-green LED will flash, and log entries will appear in the console. Find out the IP address
-assigned by looking for the log line starting `got ip:`, and configure your
-router so that the device is given a static IP address. This will save a lot of
-battery life by speeding up the WiFi connect process.
 
 Using a program such as MQTT Explorer, you can verify that the pulse count is
 being correctly published to `{meter_name}/total`, and the battery voltage to
