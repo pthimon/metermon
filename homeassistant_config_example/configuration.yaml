@@ -41,10 +41,9 @@ sensor:
     name: Gas Meter Total
     unique_id: gas_meter_total
     state_class: total_increasing
-    device_class: energy
+    device_class: gas
     state_topic: "meter_gas/total"
     unit_of_measurement: m³
-    icon: "mdi:fire"
     value_template: "{{ value | float * 0.01 }}"
   - platform: mqtt
     name: Gas Meter Battery Voltage
@@ -67,4 +66,4 @@ sensor:
         value_template: "{{ states('sensor.gas_meter_total') | float * 0.111868 }}"
         unit_of_measurement: "kWh"
         icon_template: "mdi:fire"
-        device_class: gas
+        device_class: energy
